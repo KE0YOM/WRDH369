@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Family GMRS License WRDH369 Guidelines</title>
   <style>
+    /* General Styles */
     body { 
       font-family: Arial, sans-serif; 
       line-height: 1.6; 
-      padding: 20px; 
+      margin: 0;
+      padding: 0;
       background: #f4f4f4; 
       color: #333;
     }
@@ -22,7 +24,7 @@
     section { 
       background: #ffffff; 
       padding: 20px; 
-      margin-bottom: 20px; 
+      margin: 20px; 
       border-radius: 5px; 
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
@@ -32,156 +34,248 @@
     a:hover { text-decoration: underline; }
     .footer { text-align: center; margin-top: 20px; font-size: 0.9em; color: #666; }
     .note { font-size: 0.9em; color: #555; }
+    
+    /* Splash Screen Styles */
+    #splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    #splash canvas {
+      display: block;
+    }
+    #splash h1 {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+      font-size: 3em;
+      transform: translateY(-50%);
+      font-family: 'Orbitron', sans-serif;
+    }
+    /* Hide main content until splash is gone */
+    #main-content {
+      display: none;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Family GMRS License WRDH369 Guidelines</h1>
-    <p>Comprehensive Policy, Operating Procedures, and Communication Protocols</p>
-  </header>
+  <!-- Splash Screen -->
+  <div id="splash">
+    <canvas id="starfield"></canvas>
+    <h1>Welcome to Outer Space</h1>
+  </div>
 
-  <section id="introduction">
-    <h2>Introduction</h2>
-    <p>
-      This website serves as a detailed guide for the proper use and management of the Family GMRS License WRDH369, issued by the FCC. The aim is to ensure that every authorized family member understands the policies, procedures, and responsibilities associated with using the license. By maintaining strict adherence to these guidelines, we can ensure effective communication, safety during emergencies, and compliance with FCC regulations.
-    </p>
-    <p class="note">
-      <strong>Reasoning:</strong> Establishing clear rules and procedures prevents misuse and helps maintain order during critical situations.
-    </p>
-  </section>
+  <!-- Main Content -->
+  <div id="main-content">
+    <header>
+      <h1>Family GMRS License WRDH369 Guidelines</h1>
+      <p>Comprehensive Policy, Operating Procedures, and Communication Protocols</p>
+    </header>
 
-  <section id="authorized-users">
-    <h2>Authorized Users</h2>
-    <p>
-      The GMRS License WRDH369 is exclusively for the use of specific family members, as approved by the license holder, Jeremie Cabello. This controlled access helps maintain secure communication channels and ensures that all users are familiar with the operating procedures.
-    </p>
-    <ul>
-      <li>Jeremie Cabello (License holder)</li>
-      <li>Michael Cabello</li>
-      <li>John Sandoval</li>
-      <li>Josh Cabello</li>
-      <li>Art Perez</li>
-      <li>Sidney Sandoval</li>
-      <li>Phyllis Cabello</li>
-      <li>Ruth Perez</li>
-      <li>Elijah McGill</li>
-      <li>Luca Sandoval</li>
-      <li>Savannah Perez</li>
-      <li>Esmeray Cabello</li>
-      <li>Ava Sandoval</li>
-    </ul>
-    <p class="note">
-      <strong>Reasoning:</strong> Limiting the use to authorized users minimizes the risk of unauthorized transmissions and potential FCC violations.
-    </p>
-  </section>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        This website serves as a detailed guide for the proper use and management of the Family GMRS License WRDH369, issued by the FCC. The aim is to ensure that every authorized family member understands the policies, procedures, and responsibilities associated with using the license. By maintaining strict adherence to these guidelines, we can ensure effective communication, safety during emergencies, and compliance with FCC regulations.
+      </p>
+      <p class="note">
+        <strong>Reasoning:</strong> Establishing clear rules and procedures prevents misuse and helps maintain order during critical situations.
+      </p>
+    </section>
 
-  <section id="licensee-responsibilities">
-    <h2>Licensee Responsibilities</h2>
-    <p>
-      Each authorized user must follow the established FCC regulations and our internal guidelines. This section details key responsibilities to ensure safe and legal operation of the GMRS system:
-    </p>
-    <ul>
-      <li><strong>Compliance with FCC Regulations:</strong> All users must use the GMRS channels responsibly by following frequency limits, power restrictions, and proper channel use.</li>
-      <li><strong>Station Identification:</strong> Every transmission must include the FCC-assigned call sign. This ensures traceability and accountability, especially during emergency communications.</li>
-      <li><strong>Frequency Coordination:</strong> Users must coordinate within the family to prevent overlapping transmissions, thereby reducing interference.</li>
-      <li><strong>Confidentiality:</strong> Sensitive information should not be transmitted over open channels to protect the privacy and security of family members.</li>
-      <li><strong>Prohibited Activities:</strong> Misuse of the channels, such as transmitting false distress signals or non-essential content, is strictly forbidden.</li>
-    </ul>
-    <p class="note">
-      <strong>Reasoning:</strong> Detailed responsibilities ensure that all users understand their roles and the importance of maintaining FCC compliance, ultimately safeguarding the integrity of our communications.
-    </p>
-  </section>
+    <section id="authorized-users">
+      <h2>Authorized Users</h2>
+      <p>
+        The GMRS License WRDH369 is exclusively for the use of specific family members, as approved by the license holder, Jeremie Cabello. This controlled access helps maintain secure communication channels and ensures that all users are familiar with the operating procedures.
+      </p>
+      <ul>
+        <li>Jeremie Cabello (License holder)</li>
+        <li>Michael Cabello</li>
+        <li>John Sandoval</li>
+        <li>Josh Cabello</li>
+        <li>Art Perez</li>
+        <li>Sidney Sandoval</li>
+        <li>Phyllis Cabello</li>
+        <li>Ruth Perez</li>
+        <li>Elijah McGill</li>
+        <li>Luca Sandoval</li>
+        <li>Savannah Perez</li>
+        <li>Esmeray Cabello</li>
+        <li>Ava Sandoval</li>
+      </ul>
+      <p class="note">
+        <strong>Reasoning:</strong> Limiting the use to authorized users minimizes the risk of unauthorized transmissions and potential FCC violations.
+      </p>
+    </section>
 
-  <section id="standard-operating-procedures">
-    <h2>Standard Operating Procedures (SOP)</h2>
-    <p>
-      Our SOP is designed to provide a clear, step-by-step process for managing communications, especially during emergencies. This ensures swift and effective responses while preserving secure lines of communication.
-    </p>
-    <h3>Unit Designation & Emergency Dispatch</h3>
-    <p>
-      The family is organized into units, with each unit assigned to specific channels:
-    </p>
-    <ul>
-      <li><strong>Unit-1:</strong> Head of household – responsible for initiating the Tac-Team during emergencies.</li>
-      <li><strong>Unit-2:</strong> Spouse – assists and takes over communication responsibilities when needed.</li>
-      <li><strong>Subsequent Units:</strong> Children are assigned in order of birth and contribute as required during dispatch or general communication.</li>
-    </ul>
-    <p>
-      Emergency calls are initiated on <strong>Channel 10 (DSPCH)</strong>. Upon activation:
-      <br><br>
-      - Unit-1 and Unit-2 quickly mobilize, switching to secure channels (e.g., <strong>Tac 3 on Channel 13</strong>) to coordinate the emergency response.
-      <br>
-      - The most competent child present becomes the dispatcher, ensuring that all further communications are handled efficiently.
-    </p>
-    <h3>Communication Channels & Their Purpose</h3>
-    <ul>
-      <li><strong>Channels 1-9 (Alfa to India):</strong> Reserved for immediate family communications, ensuring that messages remain within the family unit.</li>
-      <li><strong>Channel 10 (DSPCH):</strong> Dedicated to emergency dispatch and initial response coordination.</li>
-      <li><strong>Channels 11 (Com 1) & 12 (Com 2):</strong> Used for broader community or camp communications, suitable for larger gatherings or local coordination.</li>
-      <li><strong>Channel 13 (Tac 3):</strong> Provides a secure line for the Tac-Team, ensuring that sensitive communication is protected during emergencies.</li>
-      <li><strong>Green Dot & Blue Dot:</strong> Alternative secure VHF frequencies for challenging terrains such as mountainous or rural areas.</li>
-    </ul>
-    <h3>Drills, Training, and Continuous Improvement</h3>
-    <p>
-      Regular drills are essential for ensuring that every family member understands their role and can execute the SOP efficiently. Training sessions will be conducted periodically to:
-    </p>
-    <ul>
-      <li>Familiarize users with the equipment and channels.</li>
-      <li>Test the emergency dispatch protocols.</li>
-      <li>Update procedures based on feedback and evolving family dynamics.</li>
-    </ul>
-    <p class="note">
-      <strong>Reasoning:</strong> A well-practiced system reduces errors during actual emergencies and reinforces the importance of each member’s role in maintaining family safety.
-    </p>
-  </section>
+    <section id="licensee-responsibilities">
+      <h2>Licensee Responsibilities</h2>
+      <p>
+        Each authorized user must follow the established FCC regulations and our internal guidelines. This section details key responsibilities to ensure safe and legal operation of the GMRS system:
+      </p>
+      <ul>
+        <li><strong>Compliance with FCC Regulations:</strong> All users must use the GMRS channels responsibly by following frequency limits, power restrictions, and proper channel use.</li>
+        <li><strong>Station Identification:</strong> Every transmission must include the FCC-assigned call sign. This ensures traceability and accountability, especially during emergency communications.</li>
+        <li><strong>Frequency Coordination:</strong> Users must coordinate within the family to prevent overlapping transmissions, thereby reducing interference.</li>
+        <li><strong>Confidentiality:</strong> Sensitive information should not be transmitted over open channels to protect the privacy and security of family members.</li>
+        <li><strong>Prohibited Activities:</strong> Misuse of the channels, such as transmitting false distress signals or non-essential content, is strictly forbidden.
+        </li>
+      </ul>
+      <p class="note">
+        <strong>Reasoning:</strong> Detailed responsibilities ensure that all users understand their roles and the importance of maintaining FCC compliance, ultimately safeguarding the integrity of our communications.
+      </p>
+    </section>
 
-  <section id="channel-details">
-    <h2>Detailed Channel List & Usage</h2>
-    <p>
-      Below is a comprehensive list of channels along with their designated purposes:
-    </p>
-    <ul>
-      <li><strong>CH-1 (Alfa) to CH-9 (India):</strong> These channels are exclusively for communication between immediate family members, ensuring that important messages remain within the family network.</li>
-      <li><strong>CH-10 (DSPCH):</strong> Used as the emergency dispatch line. Anyone can initiate an emergency call here, but response is coordinated by Unit-1 and Unit-2.</li>
-      <li><strong>CH-11 (Com 1) & CH-12 (Com 2):</strong> Serve as the general camp and local communication lines. During daytime hours, these channels allow families to communicate with neighboring households and community members. However, they must switch to private family channels after legal sunset.</li>
-      <li><strong>CH-13 (Tac 3):</strong> Reserved for the Tac-Team during emergencies, ensuring a secure and interference-free communication line.</li>
-      <li><strong>Green Dot & Blue Dot:</strong> Additional secure frequencies for challenging conditions, offering alternative communication channels when needed.</li>
-    </ul>
-    <p class="note">
-      <strong>Reasoning:</strong> Defining clear channel usage prevents confusion during critical moments and ensures that communications are prioritized correctly.
-    </p>
-  </section>
+    <section id="standard-operating-procedures">
+      <h2>Standard Operating Procedures (SOP)</h2>
+      <p>
+        Our SOP is designed to provide a clear, step-by-step process for managing communications, especially during emergencies. This ensures swift and effective responses while preserving secure lines of communication.
+      </p>
+      <h3>Unit Designation & Emergency Dispatch</h3>
+      <p>
+        The family is organized into units, with each unit assigned to specific channels:
+      </p>
+      <ul>
+        <li><strong>Unit-1:</strong> Head of household – responsible for initiating the Tac-Team during emergencies.</li>
+        <li><strong>Unit-2:</strong> Spouse – assists and takes over communication responsibilities when needed.</li>
+        <li><strong>Subsequent Units:</strong> Children are assigned in order of birth and contribute as required during dispatch or general communication.</li>
+      </ul>
+      <p>
+        Emergency calls are initiated on <strong>Channel 10 (DSPCH)</strong>. Upon activation:
+        <br><br>
+        - Unit-1 and Unit-2 quickly mobilize, switching to secure channels (e.g., <strong>Tac 3 on Channel 13</strong>) to coordinate the emergency response.
+        <br>
+        - The most competent child present becomes the dispatcher, ensuring that all further communications are handled efficiently.
+      </p>
+      <h3>Communication Channels & Their Purpose</h3>
+      <ul>
+        <li><strong>Channels 1-9 (Alfa to India):</strong> Reserved for immediate family communications, ensuring that messages remain within the family unit.</li>
+        <li><strong>Channel 10 (DSPCH):</strong> Dedicated to emergency dispatch and initial response coordination.</li>
+        <li><strong>Channels 11 (Com 1) & 12 (Com 2):</strong> Used for broader community or camp communications, suitable for larger gatherings or local coordination.</li>
+        <li><strong>Channel 13 (Tac 3):</strong> Provides a secure line for the Tac-Team, ensuring that sensitive communication is protected during emergencies.</li>
+        <li><strong>Green Dot & Blue Dot:</strong> Alternative secure VHF frequencies for challenging terrains such as mountainous or rural areas.</li>
+      </ul>
+      <h3>Drills, Training, and Continuous Improvement</h3>
+      <p>
+        Regular drills are essential for ensuring that every family member understands their role and can execute the SOP efficiently. Training sessions will be conducted periodically to:
+      </p>
+      <ul>
+        <li>Familiarize users with the equipment and channels.</li>
+        <li>Test the emergency dispatch protocols.</li>
+        <li>Update procedures based on feedback and evolving family dynamics.</li>
+      </ul>
+      <p class="note">
+        <strong>Reasoning:</strong> A well-practiced system reduces errors during actual emergencies and reinforces the importance of each member’s role in maintaining family safety.
+      </p>
+    </section>
 
-  <section id="aprs-tracking">
-    <h2>APRS Tracking for Enhanced Situational Awareness</h2>
-    <p>
-      To enhance our emergency response capability, the Btech DMR6x2 radio transmits an analog APRS signal embedded with GPS data. This signal allows us to triangulate the position of Alfa-1’s radio.
-    </p>
-    <p>
-      To view the latest radio location, visit <a href="https://aprs.fi/" target="_blank">aprs.fi</a> and enter the callsign "KE0YOM" in the Track search bar. This real-time tracking adds an extra layer of situational awareness during emergencies.
-    </p>
-    <p class="note">
-      <strong>Reasoning:</strong> Real-time tracking of radio locations helps in coordinating rescue and response efforts, ensuring that all members are accounted for during critical situations.
-    </p>
-  </section>
+    <section id="channel-details">
+      <h2>Detailed Channel List & Usage</h2>
+      <p>
+        Below is a comprehensive list of channels along with their designated purposes:
+      </p>
+      <ul>
+        <li><strong>CH-1 (Alfa) to CH-9 (India):</strong> These channels are exclusively for communication between immediate family members, ensuring that important messages remain within the family network.</li>
+        <li><strong>CH-10 (DSPCH):</strong> Used as the emergency dispatch line. Anyone can initiate an emergency call here, but response is coordinated by Unit-1 and Unit-2.</li>
+        <li><strong>CH-11 (Com 1) & CH-12 (Com 2):</strong> Serve as the general camp and local communication lines. During daytime hours, these channels allow families to communicate with neighboring households and community members. However, they must switch to private family channels after legal sunset.</li>
+        <li><strong>CH-13 (Tac 3):</strong> Reserved for the Tac-Team during emergencies, ensuring a secure and interference-free communication line.</li>
+        <li><strong>Green Dot & Blue Dot:</strong> Additional secure frequencies for challenging conditions, offering alternative communication channels when needed.</li>
+      </ul>
+      <p class="note">
+        <strong>Reasoning:</strong> Defining clear channel usage prevents confusion during critical moments and ensures that communications are prioritized correctly.
+      </p>
+    </section>
 
-  <section id="conclusion">
-    <h2>Conclusion</h2>
-    <p>
-      This detailed guide lays out our family’s approach to using the GMRS License WRDH369 responsibly and effectively. By adhering to these policies and procedures, we ensure that communication remains reliable, secure, and efficient—even in emergency situations.
-    </p>
-    <p>
-      The structured approach, clear channel assignments, and regular training are all designed to maximize safety, ensure FCC compliance, and maintain a well-organized emergency response system.
-    </p>
-    <p>
-      Prepared and presented by Jeremie Cabello, License Holder.
-    </p>
-  </section>
+    <section id="aprs-tracking">
+      <h2>APRS Tracking for Enhanced Situational Awareness</h2>
+      <p>
+        To enhance our emergency response capability, the Btech DMR6x2 radio transmits an analog APRS signal embedded with GPS data. This signal allows us to triangulate the position of Alfa-1’s radio.
+      </p>
+      <p>
+        To view the latest radio location, visit <a href="https://aprs.fi/" target="_blank">aprs.fi</a> and enter the callsign "KE0YOM" in the Track search bar. This real-time tracking adds an extra layer of situational awareness during emergencies.
+      </p>
+      <p class="note">
+        <strong>Reasoning:</strong> Real-time tracking of radio locations helps in coordinating rescue and response efforts, ensuring that all members are accounted for during critical situations.
+      </p>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Family GMRS License WRDH369. All rights reserved.</p>
-  </footer>
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>
+        This detailed guide lays out our family’s approach to using the GMRS License WRDH369 responsibly and effectively. By adhering to these policies and procedures, we ensure that communication remains reliable, secure, and efficient—even in emergency situations.
+      </p>
+      <p>
+        The structured approach, clear channel assignments, and regular training are all designed to maximize safety, ensure FCC compliance, and maintain a well-organized emergency response system.
+      </p>
+      <p>
+        Prepared and presented by Jeremie Cabello, License Holder.
+      </p>
+    </section>
 
+    <footer class="footer">
+      <p>&copy; 2025 Family GMRS License WRDH369. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Set up the canvas for the starfield animation
+    const canvas = document.getElementById('starfield');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Create stars
+    const stars = [];
+    const numStars = 200;
+    for (let i = 0; i < numStars; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.5,
+        speed: Math.random() * 0.5 + 0.2
+      });
+    }
+
+    // Animate the starfield
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'white';
+      for (const star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Fade out the splash screen after 5 seconds
+    setTimeout(() => {
+      const splash = document.getElementById('splash');
+      splash.style.transition = "opacity 1s ease";
+      splash.style.opacity = 0;
+      setTimeout(() => {
+        splash.style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+      }, 1000);
+    }, 5000);
+  </script>
 </body>
 </html>
